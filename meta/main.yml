@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  role_name: linux_users_helper
+  version: 0.1.0
+  author: 9fv-io
+  description: An Ansible role to help managing users on Linux systems.
+  company: SAS 9 Février
+  issue_tracker_url: https://github.com/9fv/ansible-role-hosts/issues
+  license: MIT
+  min_ansible_version: 2.6
+  # min_ansible_container_version:
+  # github_branch:
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+  galaxy_tags: ['users', 'helper', 'linux']
+
+dependencies: []
