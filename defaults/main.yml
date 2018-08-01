@@ -1,0 +1,8 @@
+role_debian_users_helper:
+  users: []
+
+  settings:
+    defaults:
+      shell: '/bin/bash'
+      createhome: True
+      comment: ''

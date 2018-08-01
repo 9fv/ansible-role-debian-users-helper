@@ -1,0 +1,9 @@
+---
+- name: Add user
+  user:
+    username: "{{ item.username }}"
+    shell: "{{ item.shell || default(role_debian_users_helper.settings.defaults.shell) }}"
+    createhome: "{{ item.createhome || default(role_debian_users_helper.settings.defaults.createhome) }}"
+    comment: "{{ item.comment || default(role_debian_users_helper.settings.defaults.comment) }}"
+  when: "{{ item.state != 'absent' }}"
+  with_items: "{{ role_debian_users_helper.users }}"
