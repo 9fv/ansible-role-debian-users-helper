@@ -4,8 +4,14 @@
   roles:
     - role: ansible-role-linux-users-helper
       vars:
-        role_users_helper:
+        role_linux_users_helper:
           users:
-            - username: user1
+            - name: user1
               password: mysecretpassword
               state: present
+            - name: user2
+              password: mysecretpassword
+              shell: /bin/sh
+            - name: user3
+              password: mysecretpassword
+              state: absent

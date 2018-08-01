@@ -2,9 +2,9 @@
 role_linux_users_helper:
   users: []
 
-  settings:
-    defaults:
-      shell: '/bin/bash'
-      createhome: true
-      comment: ''
-      state: present
+role_linux_users_helper_settings:
+  defaults:
+    shell: '/bin/bash'
+    createhome: true
+    comment: ''
+    state: present

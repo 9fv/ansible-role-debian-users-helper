@@ -1,9 +1,10 @@
-# ansible-role-linux-users-helper
+ansible-role-linux-users-helper
+===============================
 
 [travis-badge]: https://img.shields.io/travis/9fv/ansible-role-linux-users-helper/master.svg?label=TravisCI
 [travis-badge-url]: https://travis-ci.org/9fv/ansible-role-linux-users-helper
 
-An [Ansible](https://www.ansible.com) An Ansible role to help managing users on Debian systems.
+An [Ansible](https://www.ansible.com) An Ansible role to help managing users on Linux systems.
 
 [![TravisCI Build Status][travis-badge]][travis-badge-url]
 
@@ -22,19 +23,27 @@ An [Ansible](https://www.ansible.com) An Ansible role to help managing users on 
 
 ## <a name="synopsis"> Synopsis
 
-An [Ansible](https://www.ansible.com) An Ansible role to help managing users on Debian systems.
+An [Ansible](https://www.ansible.com) An Ansible role to help managing users on Linux systems.
 
 ## <a name="usage"> Usage
 
-Create an inventory `inventory/all.yml` using `all` group:
+Add a list of users into vars as below:
 
 ```yaml
-all:
-  hosts:
-    mail1.example.com:
-    mail2.example.com:
-    mail3.example.com:
+role_users_helper:
+  users:
+    - username: user1
+      password: mysecretpassword
+      state: present
+    - username: user2
+      password: mysecretpassword
+      shell: /bin/sh
+    - username: user3
+      password: mysecretpassword
+      state: absent
 ```
+
+**Recommanded:** Please encrypt your passwords into an [Ansible Vault](https://docs.ansible.com/ansible/2.6/user_guide/vault.html) for better security.
 
 Create a `playbook.yml`
 
@@ -42,7 +51,7 @@ Create a `playbook.yml`
 - hosts: all
   tasks:
     - import_role:
-        name: 9fv_io.hosts
+        name: 9fv_io.linux_users_helper
 ```
 
 Run the playbook:
@@ -54,7 +63,7 @@ ansible-playbook -i inventory playbook.yml -vvv
 ## <a name="installation"> Installation
 
 ```bash
-ansible-galaxy install 9fv_io.debian_users_helper
+ansible-galaxy install 9fv_io.linux_users_helper
 ```
 
 ## <a name="test"> Tests
