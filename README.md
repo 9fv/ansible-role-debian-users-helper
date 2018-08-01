@@ -1,7 +1,7 @@
-# ansible-role-debian-users-helper
+# ansible-role-linux-users-helper
 
-[travis-badge]: https://img.shields.io/travis/9fv/ansible-role-debian-users-helper/master.svg?label=TravisCI
-[travis-badge-url]: https://travis-ci.org/9fv/ansible-role-debian-users-helper
+[travis-badge]: https://img.shields.io/travis/9fv/ansible-role-linux-users-helper/master.svg?label=TravisCI
+[travis-badge-url]: https://travis-ci.org/9fv/ansible-role-linux-users-helper
 
 An [Ansible](https://www.ansible.com) An Ansible role to help managing users on Debian systems.
 
@@ -78,7 +78,7 @@ molecule --debug test
 
 ## <a name="issues"> Issues
 
-Feel free to [submit issues](https://github.com/9fv/ansible-role-debian-users-helper/issues) and enhancement requests.
+Feel free to [submit issues](https://github.com/9fv/ansible-role-linux-users-helper/issues) and enhancement requests.
 
 ## <a name="contributing"> Contributing
 

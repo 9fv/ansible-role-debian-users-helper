@@ -8,7 +8,7 @@ before_install:
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
   - sudo apt-get -y install docker-ce
-  - ln -s /home/travis/build/9fv/ansible-role-debian-users-helper /home/travis/build/9fv/debian-users-helper
+  - ln -s /home/travis/build/9fv/ansible-role-linux-users-helper /home/travis/build/9fv/debian-users-helper
 install:
   - pip install molecule docker
 script:

@@ -2,9 +2,10 @@
 - name: Converge
   hosts: all
   roles:
-    - role: ansible-role-debian-users-helper
+    - role: ansible-role-linux-users-helper
       vars:
-        role_debian_users_helper:
-          - username: 9fv
-            password: mysecretpassword
-            state: present
+        role_users_helper:
+          users:
+            - username: user1
+              password: mysecretpassword
+              state: present
