@@ -1,7 +1,7 @@
 ---
 - name: Update users
   user:
-    name: "{{ item.name }}"
+    name: "{{ item.username }}"
     shell: "{{ item.shell | default(role_linux_users_helper_settings.defaults.shell) }}"
     createhome: "{{ item.createhome | default(role_linux_users_helper_settings.defaults.createhome) }}"
     comment: "{{ item.comment | default(role_linux_users_helper_settings.defaults.comment) }}"
