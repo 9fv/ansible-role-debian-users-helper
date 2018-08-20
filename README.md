@@ -30,7 +30,7 @@ An [Ansible](https://www.ansible.com) An Ansible role to help managing users on 
 Add a list of users into vars as below:
 
 ```yaml
-role_users_helper:
+role_linux_users_helper:
   users:
     - username: user1
       password: mysecretpassword
