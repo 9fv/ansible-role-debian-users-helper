@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: linux_users_helper
-  version: 0.1.1
+  version: 0.1.2
   author: 9fv-io
   description: An Ansible role to help managing users on Linux systems.
   company: SAS 9 Février
