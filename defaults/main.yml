@@ -8,3 +8,4 @@ role_linux_users_helper_settings:
     createhome: true
     comment: ''
     state: present
+    update_password: always
